@@ -1,16 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e3f2f951-a95f-47be-aeea-b0e5c8fef754" name="Default Changelist" comment="перенес файлы">
-      <change afterPath="$PROJECT_DIR$/task__1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task__2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task__4.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task__5.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task__6.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_18_08_2021_18_29__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_18_08_2021_18_29__Default_Changelist_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task_0.html" beforeDir="false" afterPath="$PROJECT_DIR$/task__3.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task_1.html" beforeDir="false" afterPath="$PROJECT_DIR$/task__0.html" afterDir="false" />
+    <list default="true" id="e3f2f951-a95f-47be-aeea-b0e5c8fef754" name="Default Changelist" comment="Дополнил changelog">
+      <change beforePath="$PROJECT_DIR$/changelog.md" beforeDir="false" afterPath="$PROJECT_DIR$/changelog.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +36,21 @@
       <option name="project" value="LOCAL" />
       <updated>1629297294235</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Сделал задания">
+      <created>1629311573362</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1629311573362</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Дополнил changelog">
+      <created>1629311774572</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1629311774572</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -73,6 +79,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Начал понемногу кодить" />
-    <option name="LAST_COMMIT_MESSAGE" value="Начал понемногу кодить" />
+    <MESSAGE value="Сделал задания" />
+    <MESSAGE value="Дополнил changelog" />
+    <option name="LAST_COMMIT_MESSAGE" value="Дополнил changelog" />
   </component>
 </project>
