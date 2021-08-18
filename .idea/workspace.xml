@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e3f2f951-a95f-47be-aeea-b0e5c8fef754" name="Default Changelist" comment="Начал понемногу кодить" />
+    <list default="true" id="e3f2f951-a95f-47be-aeea-b0e5c8fef754" name="Default Changelist" comment="перенес файлы">
+      <change afterPath="$PROJECT_DIR$/task__1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task__2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task__4.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task__5.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task__6.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_18_08_2021_18_29__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_18_08_2021_18_29__Default_Changelist_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task_0.html" beforeDir="false" afterPath="$PROJECT_DIR$/task__3.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task_1.html" beforeDir="false" afterPath="$PROJECT_DIR$/task__0.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,7 +25,17 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\User\IntelliJIDEAProjects\fs_egor_semenov" />
+    </key>
+  </component>
   <component name="TaskManager">
     <task id="LOCAL-00001" summary="Начал понемногу кодить">
       <created>1629297294235</created>

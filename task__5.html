@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+<p>Перед скриптом...</p>
+<script>
+    let name = prompt("Введите имя");
+    let i = 0, j = name.length - 1, check = true;
+    while (i < j) {
+        if(name[i] != name[j]) {
+            check = false;
+            break;
+        }
+        i += 1; j -= 1;
+    }
+    check ? alert(name + " палиндром") : alert(name + " не палиндром");
+</script>
+<p>...После скрипта.</p>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+<p>Перед скриптом...</p>
+<script>
+    let a=1, b=6, c;
+    alert('Переменные до: ' + a + " " + b);
+    c = a;
+    a = b;
+    b = c;
+    alert('Переменные после: ' + a + " " + b);
+    // Повторим
+    a=1, b=6;
+    alert('Новые переменные до: ' + a + " " + b);
+    a = a^b;
+    b = a^b;
+    a = a^b;
+    alert('Новые переменные после: ' + a + " " + b);
+</script>
+<p>...После скрипта.</p>
+</body>
+</html>
