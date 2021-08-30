@@ -26,17 +26,16 @@ body {
     background: #ffffff;
     border: 1px solid #cbcbcb;
     border-top: none;
-
 }
 
 .container_white li {
     height: 100%;
     border-right: 1px solid #cbcbcb;
-        float: left;
-        padding: 0 20px 0 20px;
-        transition: 0.2s;
-        list-style-type: none;
-        align: center;
+    float: left;
+    padding: 0 20px 0 20px;
+    transition: 0.2s;
+    list-style-type: none;
+    align: center;
 }
 
 .container_black li a {
@@ -50,12 +49,12 @@ body {
     float:left;
 }
 .container_white{
-        width: 80%;
-        height: 30pt;
-        margin: 0px 15%;
-        background:#fff;
-        border: 1px solid #cbcbcb;
-        border-top: none;
+    width: 80%;
+    height: 30pt;
+    margin: 0px 15%;
+    background:#fff;
+    border: 1px solid #cbcbcb;
+    border-top: none;
 }
 .nav__link_white {
     position: relative;
@@ -86,7 +85,7 @@ h1 {
 h2 {
     font-size: 14pt;
     margin-top: 1%;
-        margin-bottom: 1%;
+    margin-bottom: 1%;
 }
 h3 {
     font-size: 13pt;
@@ -104,7 +103,6 @@ h3 {
 }
 .underlogo{
     font-size: 14pt;
-
 }
 .news {
     float: left;
@@ -119,17 +117,16 @@ h3 {
 }
 .article{
     display: inline-block;
-        vertical-align: top;
-        width: 47%;
-        margin-bottom: 15px;
+    vertical-align: top;
+    width: 47%;
+    margin-bottom: 15px;
 }
 .artice_left{
     margin-right: 20px;
-
 }
 .article__img {
     border: 1px solid #cbcbcb;
-        width: 100%;
+    width: 100%;
     height: 100%;
 }
 .element {
@@ -148,27 +145,25 @@ h3 {
 
 .news > .element1 {
    z-index: 10;
-       width: 236px;
-       height: 43px;
-       background-size: 236px 43px;
-       padding-top: 10px;
-       left: -10px;
-       top: -22px;
-
+   width: 236px;
+   height: 43px;
+   background-size: 236px 43px;
+   padding-top: 10px;
+   left: -10px;
+   top: -22px;
 }
 .news > .element2 {
     z-index: 2;
-        width: 11px;
-        height: 17px;
-        background-size: 16px 17px;
-        left: -10px;
-        top: 22px;
+    width: 11px;
+    height: 17px;
+    background-size: 16px 17px;
+    left: -10px;
+    top: 22px;
 }
 aside {
     margin-top: 1.5%;
     width: 40%;
     height: auto;
-
     float: right;
    }
 .sidebar {
@@ -222,7 +217,6 @@ aside {
     padding-top: 20px;
     color: darkgray;
     height: 100px;
-
 }
 .more_articles__article:after {
     content: "";
@@ -246,10 +240,8 @@ aside {
 }
 .more_articles__menu {
     margin: 0;
-
 }
 .more_articles__menu li{
-
     list-style-type: none;
     float: left;
 }
@@ -290,15 +282,15 @@ aside {
 }
 .container li a{
     width: 138px;
-        height: 40px;
-        line-height: 40px;
-        color: #444444;
-        border-bottom: 1px solid #b7bcbf;
-        display: block;
-        font-weight: bold;
-        font-size: 12px;
-        transition: 0.5s;
-        padding-left: 0;
+    height: 40px;
+    line-height: 40px;
+    color: #444444;
+    border-bottom: 1px solid #b7bcbf;
+    display: block;
+    font-weight: bold;
+    font-size: 12px;
+    transition: 0.5s;
+    padding-left: 0;
 }
 .container ul {
     padding: 0;
@@ -311,14 +303,24 @@ aside {
     background:linear-gradient(to bottom left, lightgray, #fff 90%);
 }
 .buttons{
-
     float: left;
-        width: 50%;
-        height: auto;
-        padding-top: 35px;
-        padding-left: 15px;
-        margin-left: 15%;
-        resize: none;
+    width: auto%;
+    height: auto;
+    margin-top: 35px;
+
+    margin-left: 16%;
+    resize: none;
+    background: white;
+}
+.buttons input{
+    height: 25px;
+    width: auto;
+    align:center;
+}
+.buttons pre {
+    display: inline-block;
+    margin: 0;
+    width: 25px;
 }
 #footer {
     width: 110%;
@@ -336,10 +338,9 @@ aside {
 .footer__container button{
     border-radius: 4px;
     background: #1a1a1a;
-        color: #b7b7b7;
-        width: 83px;
-            height: 31px;
-
+    color: #b7b7b7;
+    width: 83px;
+    height: 31px;
 }
 #footer__container__header {
     weight: 100;
@@ -349,26 +350,24 @@ aside {
 }
 #footer__container__header:after {
     content: "";
-         display: block;
-         width: 100%;
-         height: 2px;
-         margin: 15px auto 20px;
-         background-color: #414141;
+    display: block;
+    width: 100%;
+    height: 2px;
+    margin: 15px auto 20px;
+    background-color: #414141;
 }
 .footer__container__text{
     display: block;
     width: 240px;
     color: #b7b7b7;
     border-bottom: 2px solid #414141;
-            height: 30px;
-            line-height: 20px;
-            font-family: Georgia;
-            font-size: 14pt;
-            padding-left: 10px;
-            padding-top: 10px;
+    height: 30px;
+    line-height: 20px;
+    font-family: Georgia;
+    font-size: 14pt;
+    padding-left: 10px;
+    padding-top: 10px;
 }
-
-
 #mail {
     width: 120%;
     height: 20px;
@@ -379,8 +378,8 @@ aside {
 }
 #mail_message {
     width: 120%;
-        height: 80px;
-        resize: none;
+    height: 80px;
+    resize: none;
 }
 .footer__container button {
     width: 40%;
@@ -400,11 +399,11 @@ aside {
 }
 .footer__container__article:after {
     content: "";
-             display: block;
-             width: 100%;
-             height: 2px;
-             margin: 0;
-             background-color: #414141;
+    display: block;
+    width: 100%;
+    height: 2px;
+    margin: 0;
+    background-color: #414141;
 }
 .footer__container__article span{
     color: #b7b7b7;
@@ -420,4 +419,21 @@ aside {
 
 #footer__container__header__fourth: after{
     width:0;
+}
+.copyrating {
+    margin-top: 30px;
+    height: 50px;
+    background: #222222;
+    color: #b7b7b7;
+    font-size: 15px;
+    line-height: 50px;
+
+}
+.text:nth-of-type(1){
+    float: left;
+    margin: 0% 15%;
+}
+.text:nth-of-type(2){
+    float: right;
+    margin: 0% 15%;
 }
