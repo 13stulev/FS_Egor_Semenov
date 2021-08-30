@@ -9,35 +9,37 @@
     function comp_asc(a, b) {
         return a - b;
     }
+
     function comp_desc(a, b) {
         return b - a;
     }
-    function array_sort(arr, check) {
-      if(check == "asc") {
-        arr.sort(comp_asc);
-      } else if(check == "desc") {
-        arr.sort(comp_desc);
-      }
-    }
-    function square_sum(arr) {
-     let ans = 0;
-     for (let i = 0; i < arr.length; i++)
-      {
-        if(arr[i] % 2 == 1) { ans += arr[i]*arr[i]; }
-      }
-      return ans;}
 
+    function array_sort(arr, check) {
+        if (check == "asc") {
+            arr.sort(comp_asc);
+        } else if (check == "desc") {
+            arr.sort(comp_desc);
+        }
+    }
+
+    function square_sum(arr) {
+        let ans = 0;
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] % 2 == 1) {
+                ans += arr[i] * arr[i];
+            }
+        }
+        return ans;
+    }
     let arr = [];
-    for ( let i = 0; i < 10; i++) {
+    for (let i = 0; i < 10; i++) {
         arr[i] = Math.floor(Math.random() * 20);
     }
-
     alert("Начальное положение элементов " + arr);
     let choice = prompt("Выберите направление сортировки (asc, desc)");
     array_sort(arr, choice);
     alert("Конечное положение элементов " + arr);
     alert("Сумма квадратов нечетных элементов " + square_sum(arr));
-
 </script>
 <p>...После скрипта.</p>
 </body>

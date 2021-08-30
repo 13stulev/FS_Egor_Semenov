@@ -7,19 +7,21 @@
 <p>Перед скриптом...</p>
 <script>
     alert("Начать игру?");
-    do{
-        let answer = Math.floor(Math.random() * 1000 + 1), num, i = 0;
+    do {
+        let answer = Math.floor(Math.random() * 1000 + 1),
+            num, i = 0;
         do {
             num = prompt(" Введите значение ");
             num =
-            if (num < answer) {
-                alert("Искомое число больше!")
-            } else if (num > answer) {
+                if (num < answer) {
+                    alert("Искомое число больше!")
+                } else if (num > answer) {
                 alert("Искомое число меньше!");
             }
         } while (answer != num);
-        alert("Вы угадали! Количество попыток: "+ i +". Начать заново?");
+        alert("Вы угадали! Количество попыток: " + i + ". Начать заново?");
     } while (confirm("Продолжить?"));
+
 </script>
 <p>...После скрипта.</p>
 </body>
