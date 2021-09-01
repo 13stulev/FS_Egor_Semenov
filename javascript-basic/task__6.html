@@ -12,13 +12,14 @@
             num, i = 0;
         do {
             num = prompt(" Введите значение ");
+            /*todo: збылся видимо*/
             num =
-                if (num < answer) {
-                    alert("Искомое число больше!")
-                } else if (num > answer) {
+            if (num < answer) {
+                alert("Искомое число больше!")
+            } else if (num > answer) {
                 alert("Искомое число меньше!");
             }
-        } while (answer != num);
+        } while (answer != num); /*todo: использовать только строгое сравнение*/
         alert("Вы угадали! Количество попыток: " + i + ". Начать заново?");
     } while (confirm("Продолжить?"));
 
