@@ -17,14 +17,12 @@
         <li><a href="#">CONTACT</a></li>
     </ul>
 </div>
-
 <ul class="container_white">
     <li><a class="nav__link_white" href="#" style="padding-left: 15pt;">CATEGORY ONE</a></li>
     <li><a class="nav__link_white" href="#">CATEGORY TWO</a></li>
     <li><a class="nav__link_white" href="#">CATEGORY THREE</a></li>
     <li><a class="nav__link_white" href="#">CATEGORY FOUR</a></li>
 </ul>
-
 <div class="header__inner">
     <aside>
         <img align="right" src="..\Site\assets\images\ad.png" width="125%">
@@ -32,13 +30,15 @@
     <h1>WebSource</h1>
     <b class="underlogo">Another Wordpress Magazine</b>
 </div>
+<div class="content_page">
 <div class="news">
     <div class="element element1">Latest Articles</div>
     <div class="element element2"></div>
 
     <div class="article artice_left">
-        <img class="article__img" src="..\Site\assets\images\art_1.png" width="90%">
-
+        <div class="article__img">
+            <img src="..\Site\assets\images\art_1.png">
+        </div>
         <h2>Fusce adipiscing commodo</h2>
         <img height="15px" src="..\Site\assets\images\clock.png">
         <time>May 25th 2010</time>
@@ -46,120 +46,133 @@
 
     </div>
     <div class="article">
-        <img class="article__img" src="..\Site\assets\images\art_2.png">
+        <div class="article__img">
+        <img src="..\Site\assets\images\art_2.png">
+        </div>
         <h2>Nullam portitor enim id dui</h2>
         <img height="15px" src="..\Site\assets\images\clock.png">
         <time>April 22nd 2010</time>
         <p>Maecenas vitae felis eu lacus rhoncus pellenesque. Nullam maecenas vitae eu [..]</p>
     </div>
     <div class="article artice_left">
-        <img class="article__img" src="..\Site\assets\images\art_3.png">
+        <div class="article__img">
+        <img src="..\Site\assets\images\art_3.png">
+        </div>
         <h2>Donec non sapien eu orci ultri</h2>
         <img height="15px" src="..\Site\assets\images\clock.png">
         <time>May 25th 2010</time>
         <p>Donec non sapien eu orci ultrices ultrices. Pellentesque vulputate nisl in nunc vestibulum [..] </p>
     </div>
     <div class="article">
-        <img class="article__img" src="..\Site\assets\images\art_4.png">
+        <div class="article__img">
+        <img src="..\Site\assets\images\art_4.png">
+        </div>
         <h2>Sed adipiscing convalis rhon</h2>
         <img height="15px" src="..\Site\assets\images\clock.png">
         <time>April 22nd 2010</time>
         <p>Cras ligula neque, pellentesque eu volutpat eget, tempus id lacus. Sed eros massa [..]</p>
     </div>
     <div class="article artice_left">
-        <img class="article__img" src="..\Site\assets\images\art_5.png">
+        <div class="article__img">
+        <img src="..\Site\assets\images\art_5.png">
+        </div>
         <h2>Maecenas vitae felis eu lacus</h2>
         <img height="15px" src="..\Site\assets\images\clock.png">
         <time>May 25th 2010</time>
         <p>Donec non sapien eu orci ultrices ultrices. Pellentesque vulputate nisl in nunc vestibulum [..] </p>
     </div>
     <div class="article">
-        <img class="article__img" src="..\Site\assets\images\art_6.png">
+        <div class="article__img">
+        <img src="..\Site\assets\images\art_6.png">
+        </div>
         <h2>Fusce adipiscing commodo</h2>
         <img height="15px" src="..\Site\assets\images\clock.png">
         <time>April 22nd 2010</time>
         <p>Cras ligula neque, pellentesque eu volutpat eget, tempus id lacus. Sed eros massa [..]</p>
     </div>
 </div>
-
-<div class="buttons">
-    <input type="button" value="1">
-    <input type="button" value="2">
-    <input type="button" value="3">
-    <input type="button" value="4">
-    <input type="button" value="5">
-    <input type="button" value="6">
-    <input type="button" value="7">
-    <input type="button" value="8">
-    <input type="button" value="9">
-    <input type="button" value="10">
-    <input type="button" value=">>">
-    <pre>...</pre>
-    <input type="button" value="Last >>">
-
-</div>
 <div class="sidebar">
-    <input id="searchbar" placeholder="ENTER SEARCH.." size="40" type="text">
-    <input id="enter" type="submit" value="ENTER">
-    <div class="media">
-        <div class="media__example">
-            <img class="media__img" src="..\Site\assets\images\social_media.png" width="25%">
-            <p class="counter">1055</p>
-            <p style="margin-top: 5px">Subscribers</p>
-        </div>
-        <div class="media__example">
-            <img class="media__img" src="..\Site\assets\images\twitter.png" width="25%">
-            <p class="counter">2134</p>
-            <p style="margin-top: 5px ">Followers</p>
-        </div>
-    </div>
-    <div class="more_articles">
-        <ul class="more_articles__menu">
-            <li><a class="navigation__button" href="#">POPULAR</a></li>
-            <li><a class="navigation__button" href="#">LATEST</a></li>
-            <li><a class="navigation__button" href="#">COMMENTS</a></li>
-        </ul>
+        <input id="searchbar" placeholder="ENTER SEARCH.." size="40" type="text">
+        <input id="enter" type="submit" value="ENTER">
+        <div class="media">
+            <div class="media__example">
+                <img class="media__img" src="..\Site\assets\images\social_media.png" width="25%">
+                <p class="counter">1055</p>
+                <span>Subscribers</span>
 
-        <div class="more_articles__article">
-            <h3>Nullam portitor enim id dui</h3>
-            <img border="1px solid darkgray" class="img_padding" src="..\Site\assets\images\woman.png" width="15%">
-            <p class="more_articles__text">Maecenas vitae felis eu lacus vitae rhoncus pellentesque [...]</p>
+            </div>
+            <div class="media__example">
+                <img class="media__img" src="..\Site\assets\images\twitter.png" width="25%">
+                <p class="counter">2134</p>
+                <span>Followers</span>
+            </div>
         </div>
-        <div class="more_articles__article">
-            <h3>Nam eget velit purus nam</h3>
-            <img border="1px solid darkgray" class="img_padding" src="..\Site\assets\images\flover_guy.png" width="15%">
-            <p class="more_articles__text">Sed adipiscing covalis rhoncis consequat. Nunc semfelis [...]</p>
+        <div class="more_articles">
+            <div class="more_articles__menu">
+                <div class="navigation__button" href="#">POPULAR</div>
+                <div class="navigation__button" href="#">LATEST</div>
+                <div class="navigation__button" href="#">COMMENTS</div>
+            </div>
+            <div>
+                <div class="more_articles__article">
+                    <h3>Nullam portitor enim id dui</h3>
+                    <img class="img_padding" src="..\Site\assets\images\woman.png" width="15%">
+                    <p class="more_articles__text">Maecenas vitae felis eu lacus vitae rhoncus pellentesque [...]</p>
+                </div>
+                <div class="more_articles__article">
+                    <h3>Nam eget velit purus nam</h3>
+                    <img class="img_padding" src="..\Site\assets\images\flover_guy.png" width="15%">
+                    <p class="more_articles__text">Sed adipiscing covalis rhoncis consequat. Nunc semfelis [...]</p>
+                </div>
+            </div>
         </div>
-    </div>
-    <div class="container">
-        <p class="container__category">CATEGORIES</p>
-        <ul style="list-style: none;">
-            <li><a href="#" style="color:black;">Interview</a></li>
-            <li><a href="#" style="color:black;">Technology</a></li>
-            <li><a href="#" style="color:black;">Inspiration</a></li>
-            <li><a href="#" style="color:black;">Photography</a></li>
-        </ul>
-    </div>
-    <div class="container" style="margin-left: 42px;">
-        <p class="container__category">SITE PAGES</p>
-        <ul style="list-style: none;">
-            <li><a href="#" style="color:black;">Home</a></li>
-            <li><a href="#" style="color:black;">About</a></li>
-            <li><a href="#" style="color:black;">Archives</a></li>
-            <li><a href="#" style="color:black;">Contact us</a></li>
-        </ul>
-    </div>
-    <div class="ads">
-        <img src="..\Site\assets\images\ad_2.png" style="padding: 10px;" width="44%">
-        <img src="..\Site\assets\images\ad_3.png" style="padding: 10px;" width="44%">
-    </div>
 
+        <div class="container">
+            <ul style="list-style: none;">
+                <li><a style="margin-right: 15px;" href="#" class="container__category head">CATEGORIES</a></li>
+                <li><a href="#" style="color:black;">Interview</a></li>
+                <li><a href="#" style="color:black;">Technology</a></li>
+                <li><a href="#" style="color:black;">Inspiration</a></li>
+                <li><a href="#" style="color:black;">Photography</a></li>
+            </ul>
+        </div>
+        <div class="container">
+            <ul style="list-style: none;">
+                <li><a href="#" class="container__category head">SITE PAGES</a></li>
+                <li><a href="#" style="color:black;">Home</a></li>
+                <li><a href="#" style="color:black;">About</a></li>
+                <li><a href="#" style="color:black;">Archives</a></li>
+                <li><a href="#" style="color:black;">Contact us</a></li>
+            </ul>
+        </div>
+        <div class="ads">
+            <img src="..\Site\assets\images\ad_2.png" style="margin-right: 10px;" width="44%">
+            <img src="..\Site\assets\images\ad_3.png" width="44%">
+        </div>
+
+    </div>
+<div class="buttons">
+        <input type="button" value="1">
+        <input type="button" value="2">
+        <input type="button" value="3">
+        <input type="button" value="4">
+        <input type="button" value="5">
+        <input type="button" value="6">
+        <input type="button" value="7">
+        <input type="button" value="8">
+        <input type="button" value="9">
+        <input type="button" value="10">
+        <input type="button" value=">>">
+        <pre>...</pre>
+        <input type="button" value="Last >>">
+
+    </div>
 </div>
 <div id="footer">
-    <div class="footer__container" style="margin: 0% 0% 0% 15%;">
+    <div class="footer__container">
         <div id="footer__container__header">
-            <img src="..\Site\assets\images\star.png" style="float: left;" width="15%">
-            <p style=" margin-left: 40px; color: #fff;">Misc.</p>
+            <img src="..\Site\assets\images\star.png" style="float: left;" width="25px">
+            <p>Misc.</p>
         </div>
         <a class="footer__container__text" href="#">Log in</a>
         <a class="footer__container__text" href="#">Sign in</a>
@@ -169,8 +182,8 @@
     </div>
     <div class="footer__container">
         <div id="footer__container__header">
-            <img src="..\Site\assets\images\coffee.png" style="float: left;" width="15%">
-            <p style=" margin-left: 40px; color: #fff;">Links:</p>
+            <img src="..\Site\assets\images\coffee.png" style="float: left;" width="25px">
+            <p>Links:</p>
         </div>
         <a class="footer__container__text" href="#">Google.com</a>
         <a class="footer__container__text" href="#">Yahoo! Finance</a>
@@ -182,8 +195,8 @@
     </div>
     <div class="footer__container third_column">
         <div id="footer__container__header">
-            <img src="..\Site\assets\images\chat.png" style="float: left;" width="10%">
-            <p style=" margin-left: 40px; color: #fff;">Links:</p>
+            <img src="..\Site\assets\images\chat.png" style="float: left;" width="25px">
+            <p>Links:</p>
         </div>
         <div class="footer__container__article">
             <a class="footer__container__article__text" href="#">HTML5 & CSS3 : Pros & Cons</a>
@@ -207,25 +220,24 @@
         </div>
     </div>
     <div class="footer__container">
-        <div class="fourth" id="footer__container__header__fourth">
-            <img src="..\Site\assets\images\mail.png" style="float: left;" width="10%">
-            <p style=" margin-left: 40px; color: #fff;">Get in touch with us:</p>
+        <div id="footer__container__header__fourth">
+            <img src="..\Site\assets\images\mail.png" style="float: left;" width="25px">
+            <p>Get in touch with us:</p>
         </div>
-        <p id="mail__text" style="color: #fff">Name:</p>
+        <p id="mail__text" >Name:</p>
         <textarea disabled id="mail"></textarea>
-        <p id="mail__text" style="color: #fff">EMAIL:</p>
+        <p id="mail__text" >EMAIL:</p>
         <textarea disabled id="mail"></textarea>
-        <p id="mail__text" style="color: #fff">MESSAGE:</p>
+        <p id="mail__text" >MESSAGE:</p>
         <textarea disabled id="mail_message"></textarea>
         <button type="button">SUBMIT</button>
 
     </div>
-    <div class="copyrating">
-        <div class="text">© 2010 WebSource. Powered by Wordpress</div>
-        <div class="text">WebSource by DDStudios</div>
-    </div>
+
 </div>
-
-
+<div class="copyrating">
+    <div class="text">© 2010 WebSource. Powered by Wordpress</div>
+    <div class="text">WebSource by DDStudios</div>
+</div>
 </body>
 </html>
