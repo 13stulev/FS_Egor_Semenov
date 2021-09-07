@@ -3,25 +3,24 @@
 <head>
     <meta charset="UTF-8">
 </head>
-<body>
-<p>Перед скриптом...</p>
 <script>
-    function comp_asc(a, b) {
+    function compAsc(a, b) {
         return a - b;
     }
 
-    function comp_desc(a, b) {
+    function compDesc(a, b) {
         return b - a;
     }
-    function array_sort(array, check) {
-        if (check == "asc") {
-            array.sort(comp_asc);
-        } else if (check == "desc") {
-            array.sort(comp_desc);
+
+    function arraySort(array, check) {
+        if (check === "asc") {
+            array.sort(compAsc);
+        } else if (check === "desc") {
+            array.sort(compDesc);
         }
     }
 
-    function square_sum(array) {
+    function squareSum(array) {
         let ans = 0;
         for (let i = 0; i < array.length; i++) {
             if (array[i] % 2 === 1) {
@@ -37,10 +36,8 @@
     }
     alert("Начальное положение элементов " + array);
     let choice = prompt("Выберите направление сортировки (asc, desc)");
-    array_sort(array, choice);
+    arraySort(array, choice);
     alert("Конечное положение элементов " + array);
-    alert("Сумма квадратов нечетных элементов " + square_sum(array));
+    alert("Сумма квадратов нечетных элементов " + squareSum(array));
 </script>
-<p>...После скрипта.</p>
-</body>
 </html>
