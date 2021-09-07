@@ -5,20 +5,19 @@
 </head>
 
 <script>
-    let name = prompt("Введите имя");
+    let word = prompt("Введите слово");
     let i = 0,
-        j = name.length - 1,
+        j = word.length - 1,
         check = true;
     while (i < j) {
-        /*todo: использовать только строгое сравнение*/
-        if (!(name[i] === name[j])) {
+        if (!(word[i] === word[j])) {
             check = false;
             break;
         }
         i += 1;
         j -= 1;
     }
-    check ? alert(name + " палиндром") : alert(name + " не палиндром");
+    check ? alert(word + " палиндром") : alert(word + " не палиндром");
 </script>
 
 </html>
