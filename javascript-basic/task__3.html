@@ -13,34 +13,33 @@
     function comp_desc(a, b) {
         return b - a;
     }
-    function array_sort(arr, check) {
+    function array_sort(array, check) {
         if (check == "asc") {
-            arr.sort(comp_asc);
+            array.sort(comp_asc);
         } else if (check == "desc") {
-            arr.sort(comp_desc);
+            array.sort(comp_desc);
         }
     }
 
-    /*todo: использовать только строгое сравнение*/
-    function square_sum(arr) {
+    function square_sum(array) {
         let ans = 0;
-        for (let i = 0; i < arr.length; i++) {
-            if (arr[i] % 2 == 1) {
-                ans += arr[i] * arr[i];
+        for (let i = 0; i < array.length; i++) {
+            if (array[i] % 2 === 1) {
+                ans += array[i] * array[i];
             }
         }
         return ans;
     }
 
-    let arr = [];
+    let array = [];
     for (let i = 0; i < 10; i++) {
-        arr[i] = Math.floor(Math.random() * 20);
+        array[i] = Math.floor(Math.random() * 20);
     }
-    alert("Начальное положение элементов " + arr);
+    alert("Начальное положение элементов " + array);
     let choice = prompt("Выберите направление сортировки (asc, desc)");
-    array_sort(arr, choice);
-    alert("Конечное положение элементов " + arr);
-    alert("Сумма квадратов нечетных элементов " + square_sum(arr));
+    array_sort(array, choice);
+    alert("Конечное положение элементов " + array);
+    alert("Сумма квадратов нечетных элементов " + square_sum(array));
 </script>
 <p>...После скрипта.</p>
 </body>

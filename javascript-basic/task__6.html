@@ -9,17 +9,18 @@
     alert("Начать игру?");
     do {
         let answer = Math.floor(Math.random() * 1000 + 1),
-            num, i = 0;
+            number, i = 0;
         do {
-            num = prompt(" Введите значение ");
+            number = prompt(" Введите значение ");
             /*todo: збылся видимо*/
-            num =
-            if (num < answer) {
+            number = Number(number);
+            if (number < answer) {
                 alert("Искомое число больше!")
-            } else if (num > answer) {
+            } else if (number > answer) {
                 alert("Искомое число меньше!");
             }
-        } while (answer != num); /*todo: использовать только строгое сравнение*/
+            i++;
+        } while (!(answer === number));
         alert("Вы угадали! Количество попыток: " + i + ". Начать заново?");
     } while (confirm("Продолжить?"));
 

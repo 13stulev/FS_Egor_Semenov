@@ -6,21 +6,22 @@
 <body>
 <p>Перед скриптом...</p><!--todo: убрать во всех файлах-->
 <script>
-    let a = 1,
-        b = 6,
-        c;
-    alert('Переменные до: ' + a + " " + b);
-    c = a;
-    a = b;
-    b = c;
-    alert('Переменные после: ' + a + " " + b);
+    let firstNumber = 1,
+        secondNumber = 6,
+        temp;
+    alert('Переменные до: ' + firstNumber + " " + secondNumber);
+    temp = firstNumber;
+    firstNumber = secondNumber;
+    secondNumber = temp;
+    alert('Переменные после: ' + firstNumber + " " + secondNumber);
     // Повторим
-    a = 1, b = 6; /*todo: использовать ";" вместо ","*/
-    alert('Новые переменные до: ' + a + " " + b);
-    a = a ^ b;
-    b = a ^ b;
-    a = a ^ b;
-    alert('Новые переменные после: ' + a + " " + b);
+    firstNumber = 1;
+    secondNumber = 6;
+    alert('Новые переменные до: ' + firstNumber + " " + secondNumber);
+    firstNumber = firstNumber ^ secondNumber;
+    secondNumber = firstNumber ^ secondNumber;
+    firstNumber = firstNumber ^ secondNumber;
+    alert('Новые переменные после: ' + firstNumber + " " + secondNumber);
 </script>
 <p>...После скрипта.</p><!--todo: убрать во всех файлах-->
 </body>

@@ -6,19 +6,17 @@
 <body>
 <p>Перед скриптом...</p>
 <script>
-    let i = 0;
-    i = Number(i);
+    let randomNumber;
     while (true) {
-        /*todo: использовать только строгое сравнение*/
-        i = Math.floor(Math.random() * 20);
-        if (i % 15 == +0) {
+        randomNumber = Math.floor(Math.random() * 20);
+        if (randomNumber % 15 === +0) {
             alert("FizzBuzz");
-        } else if (i % 5 == +0) {
+        } else if (randomNumber % 5 === +0) {
             alert("Buzz");
-        } else if (i % 3 == +0) {
+        } else if (randomNumber % 3 === +0) {
             alert("Fizz");
         } else {
-            alert(i);
+            alert(randomNumber);
         }
     }
 </script>
