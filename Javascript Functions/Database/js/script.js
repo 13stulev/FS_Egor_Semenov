@@ -1,6 +1,7 @@
 const dateRegExp = /^(0?[1-9]|[12][0-9]|3[01])[\/\-](0?[1-9]|1[012])[\/\-]\d{4}$/;
 
 class Library {
+    /*todo: именование переменных и методов с маленькой буквы, кроме имени класса*/
     set Books(Book) {
         if (Book.id == null) {
             Book.id = this._Books[Books.length].id + 1;
@@ -10,8 +11,8 @@ class Library {
     }
 
     constructor(name, Books) {
-        this.name = name;
-        this._Books = Books;
+        this.name = name; /*todo: добавь сеттер и геттер и проверку на null и пустоту значения*/
+        this._Books = Books /*todo: присваивание только через сеттеры. Создай геттер*/;
         this.visitorId = parseInt(24600);
     }
 
@@ -55,7 +56,7 @@ class Genre {
     }
 
     constructor(type, description) {
-        this._type = type;
+        this._type = type; /*todo: добавь геттеры и сеттеры и работай только через них*/
         this._description = description;
     }
 }
@@ -75,7 +76,7 @@ class Composition extends Genre {
 
     constructor(author, type, description, name) {
         super(type, description)
-        this._author = author;
+        this._author = author;/*todo: добавь сеттеры и работай только через них. Сделай проверку любую*/
         this._name = name;
     }
 }
@@ -97,10 +98,10 @@ class Book extends Composition {
 
 class Visitor {
     constructor(fullName, address, id, Books) {
-        this.fullname = fullName;
+        this.fullname = fullName;/*todo: добавь сеттеры и работай только через них. Сделай проверку любую*/
         this.address = address;
         this.id = id;
-        this.Books = [Books];
+        this.Books = [Books]; /*todo: добавь проверку того, что Books, который тебе передают, является инстансом Book*/
     }
 }
 
