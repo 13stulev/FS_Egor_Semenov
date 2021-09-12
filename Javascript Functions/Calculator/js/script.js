@@ -1,27 +1,31 @@
 function insert(num) {
-
-    if ((document.form.textview.value == 0) && (num != ".")) {
+    let regExp = new RegExp(/[\+\-\*\/]/)
+    if ((document.form.textview.value == 0) && (num != ".") && !(regExp.test(num))) {
         document.form.textview.value = num;
-    } else if (checkLastNumber()) {
-        document.form.textview.value += num;
     } else if (checkForOperators()) {
         document.form.textview.value += num;
+        return;
+    } else if (checkLastNumber()) {
+        document.form.textview.value += num;
+        return;
     }
 
     function checkLastNumber() {
-        let arrayOfNumbers = document.form.textview.value.split(/[\+\- * \/]/);
-        if ((arrayOfNumbers[arrayOfNumbers.length - 1].search(/\./) != -1) && (num == ".")) {
-            return false;
-        } else {
+        let regExp = new RegExp(/[\+\-\*\/]/)
+        let arrayOfNumbers = document.form.textview.value.split(/[\+\- \* \/]/);
+        if ((arrayOfNumbers[arrayOfNumbers.length - 1].search(/\./) == -1) && (num === ".")) {
             return true;
+        } else if (!(regExp.test(num)) && (num !== ".")){
+            return true;
+        }else {
+            return false;
         }
 
     }
 
     function checkForOperators() {
-        let arrayOfNumbers = document.form.textview.value.split(/[\+\-\*\/]/);
         let regExp = new RegExp(/[\+\-\*\/]/)
-        if ((regExp.test(arrayOfNumbers[arrayOfNumbers.length - 1])) && (regExp.test(num))) {
+        if (!(regExp.test(document.form.textview.value[document.form.textview.value.length - 1])) && (regExp.test(num))) {
             return true;
         } else {
             return false;
@@ -31,10 +35,9 @@ function insert(num) {
 
 }
 
-
 function deleteNumber() {
     if (document.form.textview.value.length > 1) {
-        var temp = document.form.textview.value;
+        let temp = document.form.textview.value;
         document.form.textview.value = temp.substring(0, temp.length - 1);
     } else {
         clean();
@@ -50,9 +53,13 @@ function sqrt() {
 }
 
 function equals() {
+    let regExp = new RegExp(/\./);
     document.form.textview.value = eval(document.form.textview.value);
+    if(regExp.test(document.form.textview.value)) {
+        let temp = parseFloat(document.form.textview.value);
+        document.form.textview.value = temp.toPrecision(3);
+    }
 }
 
-function clean() {
-    document.form.textview.value = 0;
-}
+let clean = () => document.form.textview.value = 0;
+

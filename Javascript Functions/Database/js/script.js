@@ -1,19 +1,31 @@
 const dateRegExp = /^(0?[1-9]|[12][0-9]|3[01])[\/\-](0?[1-9]|1[012])[\/\-]\d{4}$/;
 
 class Library {
-    /*todo: именование переменных и методов с маленькой буквы, кроме имени класса*/
-    set Books(Book) {
-        if (Book.id == null) {
-            Book.id = this._Books[Books.length].id + 1;
+    get name() {
+        return this._name;
+    }
+    set name(value) {
+        if(value != null) {
+            this._name = value;
         }
-        this._Books.push(Book);
-        console.log(Book.name + " Была добавлена в библиотеку");
+    }
+    get books() {
+        return this._books;
+    }
+    set books(book) {
+        if ((book.id == null) && (book instanceof Book)) {
+            book.id = this._books[Books.length].id + 1;
+            this._books.push(book);
+            console.log(book._name + " Была добавлена в библиотеку.");
+        } else {
+            console.log("Это не похоже на книгу.")
+        }
     }
 
-    constructor(name, Books) {
-        this.name = name; /*todo: добавь сеттер и геттер и проверку на null и пустоту значения*/
-        this._Books = Books /*todo: присваивание только через сеттеры. Создай геттер*/;
-        this.visitorId = parseInt(24600);
+    constructor(name, books) {
+        this._name = name;
+        this._books = books
+        this.visitorId = 24600;
     }
 
     setReturnal() {
@@ -21,21 +33,21 @@ class Library {
         return curDate.getDate() + "-" + (curDate.getMonth() + 2) + "-" + curDate.getFullYear();
     }
 
-    giveABook(Visitor, bookName) {
-        if (Visitor.id == null) {
-            console.log("Добро пожаловать," + Visitor.fullname + ", ваш идентификатор - " + (this.visitorId + 1));
-            Visitor.id = (this.visitorId + 1);
+    giveABook(visitor, bookName) {
+        if (visitor.id == null) {
+            console.log("Добро пожаловать," + visitor.fullName + ", ваш идентификатор - " + (this.visitorId + 1));
+            visitor.id = (this.visitorId + 1);
             this.visitorId++;
         }
 
-        this._Books.forEach(e => {
-            if ((e.name === bookName) && (e.reservedBy == null)) {
-                Visitor.Books.push(e);
-                this._Books[this._Books.indexOf(e)].reservedBy = Visitor.fullname;
-                this._Books[this._Books.indexOf(e)].dateOfReturnal = this.setReturnal();
-                console.log(Visitor.fullname + " вы забрали " + bookName);
-            } else if ((e.name === bookName) && (e.reservedBy !== null)) {
-                console.log("Эта книга зарезервирована " + e.reservedBy + " до " + this._Books[this._Books.indexOf(e)].dateOfReturnal);
+        this._books.forEach(e => {
+            if ((e._name === bookName) && (e.reservedBy == null)) {
+                visitor.Books.push(e);
+                this._books[this._books.indexOf(e)].reservedBy = visitor.fullName;
+                this._books[this._books.indexOf(e)].dateOfReturnal = this.setReturnal();
+                console.log(visitor.fullName + " вы забрали " + bookName);
+            } else if ((e._name === bookName) && (e.reservedBy !== null)) {
+                console.log("Эта книга зарезервирована " + e.reservedBy + " до " + this._books[this._books.indexOf(e)].dateOfReturnal);
             }
         });
 
@@ -43,6 +55,15 @@ class Library {
 }
 
 class Genre {
+    get type() {
+        return this._type;
+    }
+
+    set type(value) {
+        if(value != null) {
+            this._type = value;
+        }
+    }
     set description(value) {
         this._description = value;
     }
@@ -56,18 +77,24 @@ class Genre {
     }
 
     constructor(type, description) {
-        this._type = type; /*todo: добавь геттеры и сеттеры и работай только через них*/
+        this._type = type;
         this._description = description;
     }
 }
 
 class Composition extends Genre {
+    set name(value) {
+        if(value != null) {
+            this._name = value;
+        }
+    }
+    set author(value) {
+        if(value != null) {
+            this._author = value;
+        }
+    }
     get name() {
         return this._name;
-    }
-
-    get Genre() {
-        return this._Genre;
     }
 
     get author() {
@@ -76,7 +103,7 @@ class Composition extends Genre {
 
     constructor(author, type, description, name) {
         super(type, description)
-        this._author = author;/*todo: добавь сеттеры и работай только через них. Сделай проверку любую*/
+        this._author = author;
         this._name = name;
     }
 }
@@ -97,11 +124,29 @@ class Book extends Composition {
 }
 
 class Visitor {
+    get Books() {
+        return this._Books;
+    }
+
+    set Books(value) {
+        if( value instanceof Book) {
+            this._Books.push(value);
+        }
+    }
+    get fullName() {
+        return this._fullName;
+    }
+
+    set fullName(value) {
+        if(value != null) {
+            this._fullName = value;
+        }
+    }
     constructor(fullName, address, id, Books) {
-        this.fullname = fullName;/*todo: добавь сеттеры и работай только через них. Сделай проверку любую*/
+        this._fullName = fullName;
         this.address = address;
         this.id = id;
-        this.Books = [Books]; /*todo: добавь проверку того, что Books, который тебе передают, является инстансом Book*/
+        this._Books = [Books];
     }
 }
 
