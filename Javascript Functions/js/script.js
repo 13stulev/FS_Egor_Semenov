@@ -11,7 +11,7 @@ function insert(num) {
     function checkLastNumber() {
         let regExp = new RegExp(/[\+\-\*\/]/)
         let arrayOfNumbers = document.form.textview.value.split(/[\+\- \* \/]/);
-        if ((arrayOfNumbers[arrayOfNumbers.length - 1].search(/\./) === -1) && (num === ".")) {
+        if ((arrayOfNumbers[arrayOfNumbers.length - 1].search(/\./) === -1) && (num.toString() === ".")) {
             return true;
         } else if (!(regExp.test(num)) && (num !== ".")) {
             return true;
