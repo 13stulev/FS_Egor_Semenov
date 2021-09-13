@@ -135,11 +135,11 @@ class Book extends Composition {
 }
 
 class Visitor {
-    get Books() {
+    get Books() { /*todo: поправь имя*/
         return this._books;
     }
 
-    set Books(value) {
+    set Books(value) { /*todo: поправь имя*/
         if (value instanceof Book) {
             this._books.push(value);
         } else if (this._books === undefined) {
@@ -159,7 +159,7 @@ class Visitor {
 
     constructor(fullName, address, id, books) {
         this.fullName = fullName;
-        this.address = address;
+        this.address = address; /*todo: нету сеттора для address*/
         this.id = id;
         this.books = books;
     }
