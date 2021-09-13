@@ -74,7 +74,9 @@ class Genre {
     }
 
     set description(value) {
-        this._description = value;
+        if (value != null) {
+            this._description = value;
+        }
     }
 
     get description() {
@@ -135,11 +137,21 @@ class Book extends Composition {
 }
 
 class Visitor {
-    get Books() { /*todo: поправь имя*/
+    get address() {
+        return this._address;
+    }
+
+    set address(value) {
+        if (value != null) {
+            this._address = value;
+        }
+    }
+
+    get books() {
         return this._books;
     }
 
-    set Books(value) { /*todo: поправь имя*/
+    set books(value) {
         if (value instanceof Book) {
             this._books.push(value);
         } else if (this._books === undefined) {
@@ -159,7 +171,7 @@ class Visitor {
 
     constructor(fullName, address, id, books) {
         this.fullName = fullName;
-        this.address = address; /*todo: нету сеттора для address*/
+        this.address = address;
         this.id = id;
         this.books = books;
     }

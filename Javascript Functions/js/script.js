@@ -1,15 +1,11 @@
 function insert(num) {
     let regExp = new RegExp(/[\+\-\*\/]/)
-    /*todo: toString() для num b njulf ===*/
-    /*todo: parseInt(document.form.textview.value) и тоже === **/
-    if ((document.form.textview.value == 0) && (num != ".") && !(regExp.test(num))) {
+    if ((parseInt(document.form.textview.value) === 0) && (num.toString() !== ".") && !(regExp.test(num))) {
         document.form.textview.value = num;
     } else if (checkForOperators()) {
         document.form.textview.value += num;
-        return; /*todo: ретурны не нужны*/
     } else if (checkLastNumber()) {
         document.form.textview.value += num;
-        return;
     }
 
     function checkLastNumber() {
@@ -17,9 +13,9 @@ function insert(num) {
         let arrayOfNumbers = document.form.textview.value.split(/[\+\- \* \/]/);
         if ((arrayOfNumbers[arrayOfNumbers.length - 1].search(/\./) === -1) && (num === ".")) {
             return true;
-        } else if (!(regExp.test(num)) && (num !== ".")){
+        } else if (!(regExp.test(num)) && (num !== ".")) {
             return true;
-        }else {
+        } else {
             return false;
         }
 
@@ -27,13 +23,7 @@ function insert(num) {
 
     function checkForOperators() {
         let regExp = new RegExp(/[\+\-\*\/]/)
-        /*todo: условие можно проще. Там даже вот идея подсказывает*/
-        /*return !(regExp.test(document.form.textview.value[document.form.textview.value.length - 1])) && (regExp.test(num));*/
-        if (!(regExp.test(document.form.textview.value[document.form.textview.value.length - 1])) && (regExp.test(num))) {
-            return true;
-        } else {
-            return false;
-        }
+        return !(regExp.test(document.form.textview.value[document.form.textview.value.length - 1])) && (regExp.test(num));
     }
 }
 
@@ -57,7 +47,7 @@ function sqrt() {
 function equals() {
     let regExp = new RegExp(/\./);
     document.form.textview.value = eval(document.form.textview.value);
-    if(regExp.test(document.form.textview.value)) {
+    if (regExp.test(document.form.textview.value)) {
         let temp = parseFloat(document.form.textview.value);
         document.form.textview.value = temp.toPrecision(3);
     }
