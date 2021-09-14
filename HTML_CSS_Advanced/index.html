@@ -7,37 +7,38 @@
     <title>WebSource</title>
 </head>
 <body>
-
-<div class="container_black">
-    <nav>
-        <a href="#">HOME</a>
-        <a href="#">ABOUT</a>
-        <a href="#">ARCHIVES</a>
-        <a href="#">SITEMAP</a>
-        <a href="#">CONTACT</a>
-    </nav>
-</div>
-<div class="container_white">
-    <nav>
-        <a class="nav__link_white" href="#" style="padding-left: 15pt;">CATEGORY ONE</a>
-        <a class="nav__link_white" href="#">CATEGORY TWO</a>
-        <a class="nav__link_white" href="#">CATEGORY THREE</a>
-        <a class="nav__link_white" href="#">CATEGORY FOUR</a>
-    </nav>
-</div>
-<div class="header__inner">
-    <aside>
-        <img align="right" src="..\HTML_CSS_Advanced\assets\images\ad.png" width="125%">
-    </aside>
-    <h1>WebSource</h1>
-    <b class="underlogo">Another Wordpress Magazine</b>
-</div>
+<header>
+    <div class="container_black">
+        <nav>
+            <a href="#">HOME</a>
+            <a href="#">ABOUT</a>
+            <a href="#">ARCHIVES</a>
+            <a href="#">SITEMAP</a>
+            <a href="#">CONTACT</a>
+        </nav>
+    </div>
+    <div class="container_white">
+        <nav>
+            <a class="nav__link_white" href="#" style="padding-left: 15pt;">CATEGORY ONE</a>
+            <a class="nav__link_white" href="#">CATEGORY TWO</a>
+            <a class="nav__link_white" href="#">CATEGORY THREE</a>
+            <a class="nav__link_white" href="#">CATEGORY FOUR</a>
+        </nav>
+    </div>
+    <div class="header__inner">
+        <aside>
+            <img src="..\HTML_CSS_Advanced\assets\images\ad.png" width="100%">
+        </aside>
+        <h1>WebSource</h1>
+        <b class="underlogo">Another Wordpress Magazine</b>
+    </div>
+</header>
 <div class="content_page">
     <div class="news">
         <div class="element element1">Latest Articles</div>
         <div class="element element2"></div>
 
-        <div class="article artice_left">
+        <div class="article">
             <div class="article__img">
                 <img src="..\HTML_CSS_Advanced\assets\images\art_1.png">
             </div>
@@ -47,7 +48,7 @@
             <p>Proin est enim, modo in, ultrices at dolor. Proin aliquam risus eu sed adipiscing convallis [..]</p>
 
         </div>
-        <div class="article">
+        <div class="article article_right">
             <div class="article__img">
                 <img src="..\HTML_CSS_Advanced\assets\images\art_2.png">
             </div>
@@ -56,7 +57,7 @@
             <time>April 22nd 2010</time>
             <p>Maecenas vitae felis eu lacus rhoncus pellenesque. Nullam maecenas vitae eu [..]</p>
         </div>
-        <div class="article artice_left">
+        <div class="article">
             <div class="article__img">
                 <img src="..\HTML_CSS_Advanced\assets\images\art_3.png">
             </div>
@@ -65,7 +66,7 @@
             <time>May 25th 2010</time>
             <p>Donec non sapien eu orci ultrices ultrices. Pellentesque vulputate nisl in nunc vestibulum [..] </p>
         </div>
-        <div class="article">
+        <div class="article article_right">
             <div class="article__img">
                 <img src="..\HTML_CSS_Advanced\assets\images\art_4.png">
             </div>
@@ -74,7 +75,7 @@
             <time>April 22nd 2010</time>
             <p>Cras ligula neque, pellentesque eu volutpat eget, tempus id lacus. Sed eros massa [..]</p>
         </div>
-        <div class="article artice_left">
+        <div class="article">
             <div class="article__img">
                 <img src="..\HTML_CSS_Advanced\assets\images\art_5.png">
             </div>
@@ -83,7 +84,7 @@
             <time>May 25th 2010</time>
             <p>Donec non sapien eu orci ultrices ultrices. Pellentesque vulputate nisl in nunc vestibulum [..] </p>
         </div>
-        <div class="article">
+        <div class="article article_right">
             <div class="article__img">
                 <img src="..\HTML_CSS_Advanced\assets\images\art_6.png">
             </div>
@@ -93,7 +94,7 @@
             <p>Cras ligula neque, pellentesque eu volutpat eget, tempus id lacus. Sed eros massa [..]</p>
         </div>
     </div>
-    <div class="sidebar">
+    <aside class="sidebar">
         <input id="searchbar" placeholder="ENTER SEARCH.." size="40" type="text">
         <input id="enter" type="submit" value="ENTER">
         <div class="media">
@@ -110,11 +111,11 @@
             </div>
         </div>
         <div class="more_articles">
-            <div class="more_articles__menu">
+            <nav class="more_articles__menu">
                 <div class="navigation__button" href="#">POPULAR</div>
                 <div class="navigation__button" href="#">LATEST</div>
                 <div class="navigation__button" href="#">COMMENTS</div>
-            </div>
+            </nav>
             <div>
                 <div class="more_articles__article">
                     <h3>Nullam portitor enim id dui</h3>
@@ -128,7 +129,7 @@
                 </div>
             </div>
         </div>
-
+<nav class="sidebar__columns">
         <div class="container">
             <ul style="list-style: none;">
                 <li><a class="container__category head" href="#" style="margin-right: 15px;">CATEGORIES</a></li>
@@ -147,12 +148,13 @@
                 <li><a href="#" style="color:black;">Contact us</a></li>
             </ul>
         </div>
+</nav>
         <div class="ads">
             <img src="..\HTML_CSS_Advanced\assets\images\ad_2.png" style="margin-right: 10px;" width="44%">
             <img src="..\HTML_CSS_Advanced\assets\images\ad_3.png" width="44%">
         </div>
 
-    </div>
+    </aside>
     <div class="buttons">
         <input type="button" value="1">
         <input type="button" value="2">
@@ -171,7 +173,8 @@
     </div>
 </div>
 <footer>
-    <div class="limit">
+    <nav class="limit">
+
         <div class="footer__container">
             <div id="footer__container__header">
                 <img src="..\HTML_CSS_Advanced\assets\images\star.png" style="float: left;" width="25px">
@@ -236,7 +239,8 @@
             <button type="button">SUBMIT</button>
 
         </div>
-    </div>
+
+    </nav>
     </div>
 </footer>
 <div class="copyrating">

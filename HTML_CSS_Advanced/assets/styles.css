@@ -92,6 +92,7 @@ h2 {
     font-size: 14pt;
     margin-top: 1%;
     margin-bottom: 1%;
+    width: 100%;
 }
 
 h3 {
@@ -124,35 +125,36 @@ h3 {
     width: 970px;
     height: 900px;
     margin: 0 auto;
+
 }
 
 .news {
     width: 60%;
     position: relative;
-    padding-left: 11px;
     background: #fff;
     float: left;
-    padding: 41px 20px 0 23px;
+    padding: 41px 20px 0 11px;
     margin-top: 38px;
+    display: grid;
+    grid-template-columns: 50% 50%;
 }
 
 .article {
     display: inline-block;
     vertical-align: top;
-    width: 47%;
+    width: 100%;
     margin-bottom: 15px;
 }
-
-.artice_left {
-    margin-right: 20px;
+.article_right {
+    margin-left: 15px;
 }
 
 .article__img {
     background-repeat: no-repeat;
     background-size: cover;
     border: 1px solid #cbcbcb;
-    width: 270px;
-    height: 95px;
+    width: 280px;
+    height: 98px;
 }
 
 .article__img img {
@@ -197,7 +199,7 @@ h3 {
 
 aside {
     margin-top: 1.5%;
-    width: 40%;
+
     height: auto;
     float: right;
 }
@@ -280,6 +282,11 @@ aside {
     background: #fff;
     height: 252px;
     margin-top: 75px;
+}
+.sidebar__columns {
+    margin-top: 20px;
+    display: flex;
+
 }
 
 .more_articles__article {
@@ -411,7 +418,6 @@ aside {
 
 .buttons {
     float: left;
-    /*todo: знак процента*/
     margin-top: 35px;
     resize: none;
     background: white;
@@ -431,7 +437,8 @@ aside {
 
 footer {
     background: #111111;
-    padding: 48px 0 0 20px;
+    padding: 48px 0 20px 20px;
+    display: flex;
 }
 
 .limit {
@@ -499,7 +506,6 @@ footer {
 }
 
 #footer__container__header__fourth {
-    margin-left: 33px;
     color: #fff;
     font-weight: bold;
 }
@@ -530,6 +536,7 @@ footer {
     font-weight: bold;
     font-size: 11px;
     margin-bottom: 4px;
+    margin-top: 5px;
 }
 
 #mail_message {
