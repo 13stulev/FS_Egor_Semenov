@@ -226,19 +226,20 @@
             </div>
         </div>
         <div class="footer__container">
+
             <div id="footer__container__header__fourth">
                 <img src="..\Javascript_and_Browser\assets\images\mail.png" style="float: left;" width="25px">
                 <p>Get in touch with us:</p>
             </div>
             <p id="mail__text">Name:</p>
-            <textarea name="name" id="mail"></textarea>
+            <input name="name" id="mail" placeholder="myMail@example.com" onkeydown="saveName()"></input>
             <p id="mail__text">Telephone:</p>
-            <textarea name="telephone" id="mail"></textarea>
+            <input name="telephone" pattern="\d{0,11}" placeholder="+X(XXX)XX-XX-XXX" id="mail" onkeydown="saveTelephone()"></input>
             <p id="mail__text">EMAIL:</p>
-            <textarea name="mail" id="mail"></textarea>
+            <input name="mail" id="mail" onkeydown="saveMail()"></input>
             <p id="mail__text">MESSAGE:</p>
-            <textarea name="message" id="mail_message"></textarea>
-            <button type="button">SUBMIT</button>
+            <textarea name="message" id="mail_message" onkeydown="saveMessage()"></textarea>
+            <button name="submit" type="submit" onclick="sendMessage()">SUBMIT</button>
 
         </div>
 
@@ -249,5 +250,6 @@
     <div class="text">© 2010 WebSource. Powered by Wordpress</div>
     <div class="text">WebSource by DDStudios</div>
 </div>
+<script src="js/script.js"></script>
 </body>
 </html>

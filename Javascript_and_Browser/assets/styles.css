@@ -476,6 +476,14 @@ footer {
     border: none;
     border-radius: 4px;
 }
+.footer__container input {
+    background: #353535;
+    border: none;
+    border-radius: 4px;
+}
+.footer__container form {
+    width: inherit;
+}
 
 .footer__container button {
     border-radius: 4px;
