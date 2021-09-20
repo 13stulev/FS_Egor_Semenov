@@ -27,8 +27,10 @@ function sendMessage() {
 }
 
 function getCookie(name) {
+    /*todo: пользоваться let*/
     var value = "; " + document.cookie;
     var parts = value.split("; " + name + "=");
+    /*todo: строгое сравнение*/
     if (parts.length == 2) return parts.pop().split(";").shift();
 }
 
@@ -47,6 +49,7 @@ function checkTelephone() {
 }
 
 function checkMail() {
+    /*todo: когда у тебя значение у переменной не меняется используй const*/
     let regExp = new RegExp(/^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i);
     return regExp.test(document.getElementsByName('mail')[0].value);
 }
