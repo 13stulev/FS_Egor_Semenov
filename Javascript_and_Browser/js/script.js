@@ -1,6 +1,7 @@
 function sendMessage() {
     if (checkName() && checkTelephone() && checkMail() && checkMessage() && (getCookie("name") !== document.getElementsByName('name')[0].value)) {
         document.cookie = "name=" + document.getElementsByName('name')[0].value;
+        document.cookie = document.getElementsByName('name')[0].value.toString() + "IsSent=true";
         alert(document.getElementsByName('name')[0].value + " спасибо за обращение!");
 
     } else {
@@ -17,19 +18,24 @@ function sendMessage() {
         if (!checkMessage()) {
             fields += "письмо, ";
         }
-        if (getCookie("name") === document.getElementsByName('name')[0].value && fields === "") {
+        let checkCookieName = () => {
+            return getCookie("name") === document.getElementsByName('name')[0].value;
+        }
+        let checkIsSent = () => {
+            return document.getElementsByName('name')[0].value === true;
+        }
+        if (checkCookieName && fields === "" && checkIsSent) {
             alert("Ваше обращение обрабатывается");
         } else {
-
             alert("Поля " + fields + "заполнены неверно");
         }
     }
 }
 
 function getCookie(name) {
-    var value = "; " + document.cookie;
-    var parts = value.split("; " + name + "=");
-    if (parts.length == 2) return parts.pop().split(";").shift();
+    let value = "; " + document.cookie;
+    let parts = value.split("; " + name + "=");
+    if (parts.length === 2) return parts.pop().split(";").shift();
 }
 
 function checkName() {

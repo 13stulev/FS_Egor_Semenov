@@ -232,14 +232,15 @@
                 <p>Get in touch with us:</p>
             </div>
             <p id="mail__text">Name:</p>
-            <input name="name" id="mail" placeholder="myMail@example.com" onkeydown="saveName()"></input>
+            <input name="name" id="mail" onkeydown="saveName()" onblur="saveName()"></input>
             <p id="mail__text">Telephone:</p>
             <input name="telephone" pattern="\d{0,11}" placeholder="+X(XXX)XX-XX-XXX" id="mail"
-                   onkeydown="saveTelephone()"></input>
+                   onkeydown="saveTelephone()" onblur="saveTelephone()"></input>
             <p id="mail__text">EMAIL:</p>
-            <input name="mail" id="mail" onkeydown="saveMail()"></input>
+            <input name="mail" id="mail" placeholder="myMail@example.com" onblur="saveMail()"
+                   onkeydown="saveMail()"></input>
             <p id="mail__text">MESSAGE:</p>
-            <textarea name="message" id="mail_message" onkeydown="saveMessage()"></textarea>
+            <textarea name="message" id="mail_message" onblur="saveMessage()" onkeydown="saveMessage()"></textarea>
             <button name="submit" type="submit" onclick="sendMessage()">SUBMIT</button>
 
         </div>
