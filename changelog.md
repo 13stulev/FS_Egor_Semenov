@@ -6,4 +6,4 @@
 | 12.09.2021|Javascript Functions| Необходимо реализовать браузерное приложение "Калькулятор"| [тык](https://gitlab.com/nc-samara-frontend-school/2021/development/fs_egor_semenov/-/merge_requests/5)|
 | 12.09.2021|OOP in Javascript| Создать 3-7 связанных классов, предметную область придумать самостоятельно и обсудить с куратором.|[тык](https://gitlab.com/nc-samara-frontend-school/2021/development/fs_egor_semenov/-/merge_requests/5)|
 | 19.09.2021|Продвинутый HTML\CSS| Изменить вёрстку сайта из прошлого задания, используя возможности HTML5 и CSS3.|[тык](https://gitlab.com/nc-samara-frontend-school/2021/development/fs_egor_semenov/-/merge_requests/6)
-| 21.09.2021|Javascript and DOM|Разработать страницу для работы с таблицей|
+| 21.09.2021|Javascript and DOM|Разработать страницу для работы с таблицей| [тык](https://gitlab.com/nc-samara-frontend-school/2021/development/fs_egor_semenov/-/merge_requests/8)
