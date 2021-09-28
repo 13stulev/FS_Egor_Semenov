@@ -7,3 +7,4 @@
 | 12.09.2021|OOP in Javascript| Создать 3-7 связанных классов, предметную область придумать самостоятельно и обсудить с куратором.|[тык](https://gitlab.com/nc-samara-frontend-school/2021/development/fs_egor_semenov/-/merge_requests/5)|
 | 19.09.2021|Продвинутый HTML\CSS| Изменить вёрстку сайта из прошлого задания, используя возможности HTML5 и CSS3.|[тык](https://gitlab.com/nc-samara-frontend-school/2021/development/fs_egor_semenov/-/merge_requests/6)
 | 19.09.2021|Javascript and Browser| Научиться валидировать данные и хранить их в локальных хранилищах. Научиться работать с cookies|[тык](https://gitlab.com/nc-samara-frontend-school/2021/development/fs_egor_semenov/-/merge_requests/7)
+| 28.09.2021|Frontend Application Infrastructure| Научиться работать с Gulp и WebPack| [тык](https://gitlab.com/nc-samara-frontend-school/2021/development/fs_egor_semenov/-/merge_requests/8)
