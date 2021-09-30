@@ -1,1 +1,0 @@
-let randomNumber;for(;;)randomNumber=Math.floor(20*Math.random()),randomNumber%15==0?alert("FizzBuzz"):randomNumber%5==0?alert("Buzz"):randomNumber%3==0?alert("Fizz"):alert(randomNumber);

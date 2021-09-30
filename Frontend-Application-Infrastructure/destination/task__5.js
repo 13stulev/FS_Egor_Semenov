@@ -1,1 +1,0 @@
-let word=prompt("Введите слово"),i=0,j=word.length-1,check=!0;for(;i<j;){if(word[i]!==word[j]){check=!1;break}i+=1,--j}check?alert(word+" палиндром"):alert(word+" не палиндром");

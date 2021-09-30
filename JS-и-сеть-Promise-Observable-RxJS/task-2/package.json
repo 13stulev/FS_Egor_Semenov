@@ -2,7 +2,9 @@
   "name": "task-2",
   "version": "1.0.0",
   "dependencies": {
-    "rxjs": "^7.3.0",
     "webpack": "^5.55.1"
+  },
+  "devDependencies": {
+    "rxjs": "^7.3.0"
   }
 }
