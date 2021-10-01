@@ -7,9 +7,21 @@
     <title>Прогноз погоды</title>
 </head>
 <body>
+<div class="limit">
     <h3>Введите название города</h3>
-    <input type="text">
-    <button>ok</button>
+    <input type="text" id="searchbar">
+    <button onclick="setWeather()">ok</button>
+
+    <div id="example_row">
+        <p id="city_name">Samara</p>
+        <hr>
+        <p id="temperature">0&deg;</p>
+
+        <hr>
+        <img align="center" id="img"></img>
+
+    </div>
+</div>
 <script src="js/script.js"></script>
 </body>
 </html>
