@@ -10,3 +10,4 @@
 | 21.09.2021|Javascript and DOM|Разработать страницу для работы с таблицей| [тык](https://gitlab.com/nc-samara-frontend-school/2021/development/fs_egor_semenov/-/merge_requests/8)
 | 28.09.2021|Frontend Application Infrastructure| Научиться работать с Gulp и WebPack| [тык](https://gitlab.com/nc-samara-frontend-school/2021/development/fs_egor_semenov/-/merge_requests/9)
 | 30.09.2021|Algorithms|Работа со структурами данных и быстрой сортировкой| [тык](https://gitlab.com/nc-samara-frontend-school/2021/development/fs_egor_semenov/-/merge_requests/11)
+| 30.09.2021|JS и сеть, Promise, Observable, RxJS| Получить умение пользоваться ассинхронными методами| [тык](https://gitlab.com/nc-samara-frontend-school/2021/development/fs_egor_semenov/-/merge_requests/10)

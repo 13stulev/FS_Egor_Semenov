@@ -1,0 +1,16 @@
+.limit {
+    width: 250px;
+    margin: auto;
+}
+
+#example_row {
+    margin-top: 100px;
+    width: 150px;
+    border: 1px solid black;
+}
+p {
+    text-align: center;
+}
+img {
+    margin-left: 30%;
+}
