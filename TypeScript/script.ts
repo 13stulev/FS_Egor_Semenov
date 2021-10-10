@@ -1,9 +1,17 @@
 const dateRegExp = /^(0?[1-9]|[12][0-9]|3[01])[\/\-](0?[1-9]|1[012])[\/\-]\d{4}$/;
 
-class Library {
+type numOrString = number | string;
+
+interface IGettersAndSetters {
+    get id(): numOrString;
+
+    set id(value: numOrString);
+}
+
+class Library implements IGettersAndSetters {
 
     private _visitorId: number;
-    private _bookId: number;
+    private _id: numOrString;
     private _name: string;
     private _books: Book[];
 
@@ -37,8 +45,8 @@ class Library {
         }
         for (let i = 0; i < book.length; i++) {
             this.books.push(book[i]);
-            book[0].id = this._bookId + 1;
-            this._bookId++;
+            book[0].id = <number>this.id + 1;
+            this.id = <number>this.id + 1;
             console.log(book[i].name + " Была добавлена в библиотеку.");
         }
     }
@@ -48,7 +56,15 @@ class Library {
         this._name = name;
         this._books = [];
         this._visitorId = 24600;
-        this._bookId = 1;
+        this._id = 1;
+    }
+
+    get id(): numOrString {
+        return this._id;
+    }
+
+    set id(value: numOrString) {
+        this._id = value;
     }
 
     setReturnal() {
@@ -59,8 +75,8 @@ class Library {
     pushBook(book: Book) {
         if ((book.id == null)) {
             this.books.push(book);
-            book.id = this._bookId + 1;
-            this._bookId++;
+            book.id = <number>this.id + 1;
+            this.id = <number>this.id + 1;
             console.log(book.name + " Была добавлена в библиотеку.");
         } else if (this.books === undefined) {
             this._books = [];
@@ -90,12 +106,13 @@ class Library {
     }
 }
 
+
 class Genre {
     private _type: string;
     private _description: string;
 
     get type(): string {
-        return this.type;
+        return this._type;
     }
 
     set type(value: string) {
@@ -156,10 +173,10 @@ class Composition extends Genre {
     }
 }
 
-class Book extends Composition {
+class Book extends Composition implements IGettersAndSetters {
 
 
-    id: number | string;
+    id: numOrString;
     private _reservedBy: string;
     private _dateOfReturn: string;
     private _dateOfEdition: string;
@@ -242,14 +259,27 @@ class Visitor {
 
 type ConstructorType<T> = new(...args: any[]) => T;
 
-function createObject(ctor: ConstructorType<any>, ...args: any[]) {
+// Декоратор с фабрикой
+
+const typeOfClass = (constructor: Function) => {
+    return function (ctor: ConstructorType<any>, ...args: any[]) {
+        console.log(`Object ${arguments[0].name} has been created`);
+        return constructor(ctor, ...args);
+    }
+};
+
+
+let createObject = function (ctor: ConstructorType<any>, ...args: any[]) {
     return new ctor(...args);
 }
+
+createObject = typeOfClass(createObject);
+
+console.log(createObject);
 
 let jean: Visitor = createObject(Visitor, "Jean Valjean", "France", null, []);
 let mary: Visitor = createObject(Visitor, "Mary Poppins", "London", null, []);
 let visitors = [jean, mary];
-console.log(visitors);
 
 
 let warAndPeace: Composition = createObject(Composition, "Leo Tolstoy", "novel", null, "War and Peace");
@@ -261,11 +291,11 @@ let secondBook: Book = createObject(Book, lesMiserables, "18-02-2000", null, nul
 let thirdBook: Book = createObject(Book, fahrenheit, "18-02-2000", null, null, null);
 let books = [firstBook, secondBook, thirdBook];
 
-let britishLibrary = new Library("British Library");
+let britishLibrary = createObject(Library, "British Library");
 britishLibrary.pushBook(firstBook);
 britishLibrary.pushBook(secondBook);
 britishLibrary.pushBook(thirdBook);
 
 britishLibrary.giveABook(jean, "Les Misérables");
 britishLibrary.giveABook(mary, "Les Misérables");
-console.log("britishLibrary");
+console.log(britishLibrary);
