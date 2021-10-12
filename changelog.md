@@ -12,3 +12,4 @@
 | 30.09.2021|Algorithms|Работа со структурами данных и быстрой сортировкой| [тык](https://gitlab.com/nc-samara-frontend-school/2021/development/fs_egor_semenov/-/merge_requests/11)
 | 30.09.2021|JS и сеть, Promise, Observable, RxJS| Получить умение пользоваться ассинхронными методами| [тык](https://gitlab.com/nc-samara-frontend-school/2021/development/fs_egor_semenov/-/merge_requests/10)
 | 10.10.2021|Typescript|Переработать задание из домашней работы номер 5 ("OOP in Javascript") таким образом, чтобы код был написан на TypeScript.| [тык](https://gitlab.com/nc-samara-frontend-school/2021/development/fs_egor_semenov/-/merge_requests/12)
+| 12.10.2021|Angular basics|Создать angular приложение по поиску домашних животных.| [тык](https://gitlab.com/nc-samara-frontend-school/2021/development/fs_egor_semenov/-/merge_requests/13)

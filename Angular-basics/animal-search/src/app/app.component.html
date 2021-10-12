@@ -1,0 +1,25 @@
+<div class="limit">
+  <h1>Поиск домашних животных</h1>
+  <input [(ngModel)]="_searchText" autocomplete="off" class="animals-search__input" id="search-text"
+         placeholder="Поиск" size="40"
+         type="text" value="">
+  <div (click)="_hideCats()" class="animals-cats--hide">{{_hideItem ? 'Показать котиков' :
+    'Скрыть котиков'}}</div>
+  <div class="animals__list">
+    <div class="animals__list__animal" *ngFor="let animal of filterArray(_searchText);"
+         (click)="this.animal.isVisible = !this.animal.isVisible">
+
+      <img src="{{animal.img}}" width="100px">
+      <p>{{animal.name}}</p>
+      <p>{{animal.breed}}</p>
+      <hr>
+      <div *ngIf="this.animal.isVisible">
+        <p>Вид: {{animal.type}}</p>
+        <p>Пол: {{animal.gender}}</p>
+        <p>Возраст: {{animal.age}}</p>
+        <p>Вес: {{animal.weight}}</p>
+      </div>
+    </div>
+  </div>
+</div>
+

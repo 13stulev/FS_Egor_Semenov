@@ -1,0 +1,36 @@
+.limit {
+  width: 970px;
+  margin: 0 auto;
+}
+h1 {
+  text-align: center;
+}
+input{
+  width: 970px;
+  height: 30px;
+  border-radius: 2px;
+  border: #414141 solid 1px;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.animals__list {
+  display: flex;
+  flex-wrap: wrap;
+  width: 970px;
+  padding: 38px 37px 0;
+}
+p {
+  text-align: center;
+}
+img {
+  margin-left: 25px;
+}
+hr {
+  width: 100px;
+}
+.animals__list__animal {
+  width: 150px;
+  margin-left: 10px;
+  margin-bottom: 15px;
+}
