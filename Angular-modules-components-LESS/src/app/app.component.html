@@ -1,0 +1,15 @@
+<div class="limit">
+  <app-search (hideCats)="setHideItem($event)" (searchText)="setSearchText($event)"></app-search>
+  <div class="animals__list">
+    <div class="animals__list__animal" *ngFor="let animal of returnAnimals();"
+         (click)="this.animal.isVisible = !this.animal.isVisible">
+
+      <app-animal-card [breed]="animal.breed" [name]="animal.name" [image]="animal.img"></app-animal-card>
+      <hr>
+      <div *ngIf="this.animal.isVisible">
+        <app-animal-info  [type]="animal.type" [gender]="animal.gender" [age]="animal.age" [weight]="animal.weight"></app-animal-info>
+      </div>
+    </div>
+  </div>
+</div>
+

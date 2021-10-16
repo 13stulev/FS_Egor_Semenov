@@ -1,0 +1,6 @@
+<h1>Поиск домашних животных</h1>
+<input (keyup)="outputText(searches.value)" autocomplete="off" class="animals-search__input" #searches
+       placeholder="Поиск" size="40"
+       type="text" value="">
+<div (click)="hideCatsFunction()">{{isHidden ? 'Показать котиков' :
+  'Скрыть котиков'}}</div>
