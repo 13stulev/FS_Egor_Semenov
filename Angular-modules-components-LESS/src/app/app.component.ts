@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {Animal, DataService} from "../../../Angular-basics/animal-search/src/app/data.service";
+import {Animal, DataService} from "./data.service";
+
 
 
 @Component({
