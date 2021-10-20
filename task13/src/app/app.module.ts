@@ -2,22 +2,20 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { AnimalCardComponent } from './animal-card/animal-card.component';
-import {FormsModule} from "@angular/forms";
-import { AnimalInfoComponent } from './animal-info/animal-info.component';
+import { CardComponent } from './card/card.component';
+import { InfoComponent } from './info/info.component';
 import { SearchComponent } from './search/search.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AnimalCardComponent,
-    AnimalInfoComponent,
+    CardComponent,
+    InfoComponent,
     SearchComponent
   ],
-    imports: [
-        BrowserModule,
-        FormsModule
-    ],
+  imports: [
+    BrowserModule
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })

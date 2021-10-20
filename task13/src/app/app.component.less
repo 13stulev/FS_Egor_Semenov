@@ -1,14 +1,15 @@
-@limitwidth : 970px;
 
 .limit {
   width: 970px;
   margin: 0 auto;
 }
+
 h1 {
   text-align: center;
 }
-input{
-  width: @limitwidth;
+
+input {
+  width: 970px;
   height: 30px;
   border-radius: 2px;
   border: #414141 solid 1px;
@@ -19,20 +20,25 @@ input{
 .animals__list {
   display: flex;
   flex-wrap: wrap;
-  width: @limitwidth;
+  width: 970px;
   padding: 38px 0 0;
+
+  &__animal {
+    width: 150px;
+    margin-left: 10px;
+    margin-bottom: 15px;
+  }
+
 }
+
 p {
   text-align: center;
 }
+
 img {
   margin-left: 25px;
 }
+
 hr {
   width: 100px;
-}
-.animals__list__animal {
-  width: 150px;
-  margin-left: 10px;
-  margin-bottom: 15px;
 }

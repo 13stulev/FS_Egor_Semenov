@@ -1,8 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {Animal, DataService} from "./data.service";
 
-
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -12,12 +10,9 @@ export class AppComponent implements OnInit{
 
   title = "no";
   _hideItem: boolean = false;
-  _animals: Animal[];
+  _animals: Animal[] = [];
   _searchText: string = "";
 
-  constructor() {
-    this._animals = DataService.getAnimals();
-  }
 
   ngOnInit() {
     console.log(this._animals);
@@ -47,5 +42,3 @@ export class AppComponent implements OnInit{
   }
 
 }
-
-

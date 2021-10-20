@@ -16,16 +16,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'Angular-modules-components-LESS'`, () => {
+  it(`should have as title 'task13'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('Angular-modules-components-LESS');
+    expect(app.title).toEqual('task13');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('Angular-modules-components-LESS app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain('task13 app is running!');
   });
 });
