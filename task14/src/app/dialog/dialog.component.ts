@@ -1,6 +1,6 @@
 import {Component} from '@angular/core';
 
-import {Animal, DataService, IAnimal} from "../data.service";
+import {Animal, DataService, IAnimal} from "../services/data.service";
 import {HttpClient, HttpClientModule} from "@angular/common/http";
 
 @Component({

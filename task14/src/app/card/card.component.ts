@@ -1,6 +1,7 @@
 import {Component, EventEmitter, Input, Output} from '@angular/core';
-import {Animal, DataService, IAnimal} from "../data.service";
+import {Animal, DataService, IAnimal} from "../services/data.service";
 import {HttpClient} from "@angular/common/http";
+import {HttpService} from "../services/http.service";
 
 @Component({
   selector: 'app-card',
@@ -9,33 +10,22 @@ import {HttpClient} from "@angular/common/http";
 })
 export class CardComponent {
   @Input() pet: Animal = new Animal(0,false,'','','','',0, 0,'');
-  pets: Animal[] = [];
-  @Output() animals = new EventEmitter <Animal[]>();
+  @Input() pets: Animal[] = [];
+  @Output() petsEmitter = new EventEmitter <Animal[]>();
 
 
-  constructor(private http:HttpClient) {
-    this.http.get<IAnimal[]>(`http://localhost:3000/animals`).subscribe(val=>{
-      this.pets = val;
-      console.log("TEst");
-    })
+  constructor(private http:HttpService) {
   }
 
-  setId() {
-    DataService.setId(this.pet.id);
-
+  setSelectedId() {
+    DataService.setSelectedId(this.pet.id);
   }
 
   delete() {
-    DataService.setId(this.pet.id);
-    this.http.delete(`http://localhost:3000/animals/${DataService.getId()}`).subscribe(()=>{
-      console.log("it Works!");
-      this.http.get<IAnimal[]>(`http://localhost:3000/animals`).subscribe(val=>{
-        this.pets = val;
-        console.log("Test");
-      })
-    })
+    DataService.setSelectedId(this.pet.id);
+    this.http.delete();
 
     this.pets.splice(DataService.getId(),1);
-    this.animals.emit(this.pets);
+    this.petsEmitter.emit(this.pets);
   }
 }

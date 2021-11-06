@@ -1,7 +1,10 @@
 import {Component, OnInit} from '@angular/core';
-import {Animal, DataService, IAnimal} from "../data.service";
+import {Animal, DataService, IAnimal} from "../services/data.service";
 import {HttpClient} from "@angular/common/http";
 import {FormControl, FormGroup, Validators} from "@angular/forms";
+import {HttpService} from "../services/http.service";
+import {D} from "@angular/cdk/keycodes";
+
 
 
 @Component({
@@ -13,7 +16,9 @@ export class AnimalFormComponent implements OnInit {
 
   public pet: Animal = new Animal(0,false,'','','','',0, 0,'');
   myForm : FormGroup;
-  constructor(private http: HttpClient) {
+  error: boolean = false;
+  errorMessage: string = '';
+  constructor(public http: HttpService) {
     this.myForm = new FormGroup({
 
       "name": new FormControl("", [Validators.required,
@@ -28,17 +33,20 @@ export class AnimalFormComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.http.get<IAnimal>(`http://localhost:3000/animals/${DataService.getId()}`).subscribe(animals => {
+    this.http.getAnimalById().subscribe(animals => {
       this.pet = animals;
-    })
+    },
+      (error) => {
+        this.error = true;
+        this.errorMessage = error;
+        console.log(error)
+      })
   }
 
 
   change() {
       this.pet.img = `assets/images/${this.pet.breed}.png`
-      this.http.put(`http://localhost:3000/animals/${DataService.getId()}`, this.pet).subscribe(animals => {
-        console.log("succ");
-      })
+      this.http.changeAnimalById(this.pet);
     }
 
 }

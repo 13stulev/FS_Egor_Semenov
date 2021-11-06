@@ -22,8 +22,15 @@ export interface IAnimal {
 @Injectable()
 export class DataService {
   private static id: number;
+  public static animalList: Animal[];
 
-  static setId(value: number) {
+  static setOrUpdateAnimalList(animals: Animal[]){
+    this.animalList = animals;
+  }
+  static getAnimalList(){
+   return this.animalList;
+  }
+  static setSelectedId(value: number) {
     this.id = value;
   }
   static getId(): number {

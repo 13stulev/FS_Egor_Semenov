@@ -1,4 +1,5 @@
-<form [formGroup]="myForm">
+<div *ngIf="error, else formBlock">Упс, ошибочка</div>
+<ng-template [formGroup]="myForm" #formBlock>
 
   <div>
     <div>Имя питомца:</div>
@@ -41,7 +42,7 @@
            [(ngModel)]=pet.weight >
   </div>
   <div class="button__grid">
-    <button mat-button type="submit" [disabled]="!myForm.valid" (click)="change()">Изменить данные о питомце</button>
+    <button mat-button type="submit" routerLink="" [disabled]="!myForm.valid" (click)="change()">Изменить данные о питомце</button>
     <button mat-raised-button routerLink="">Назад</button>
   </div>
-</form>
+</ng-template>

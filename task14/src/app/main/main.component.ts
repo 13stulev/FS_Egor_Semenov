@@ -1,8 +1,11 @@
 import {AfterViewChecked, Component, Input, OnChanges, OnInit, SimpleChanges} from '@angular/core';
-import {Animal, DataService, IAnimal} from "../data.service";
+import {Animal, DataService, IAnimal} from "../services/data.service";
 import {MatDialog} from "@angular/material/dialog";
 import {DialogComponent} from "../dialog/dialog.component";
 import {HttpClient} from "@angular/common/http";
+import {HttpService} from "../services/http.service";
+import {D} from "@angular/cdk/keycodes";
+
 
 
 @Component({
@@ -16,7 +19,7 @@ export class MainComponent implements OnInit {
   _animals: Animal[] = [];
   _searchText: string = "";
 
-  constructor(public dialog: MatDialog, private http: HttpClient) {
+  constructor(public dialog: MatDialog, public http: HttpService) {
   }
 
 
@@ -24,20 +27,21 @@ export class MainComponent implements OnInit {
     const dialogRef = this.dialog.open(DialogComponent, {
       width: '60%',
     });
-    dialogRef.afterClosed().subscribe(() => this.http.get<IAnimal[]>("http://localhost:3000/animals").subscribe(animals => {
-      this._animals = animals;
-    }));
+    dialogRef.afterClosed().subscribe(() => {
+      this.http.setOrUpdateAnimalList();
+      this._animals = DataService.getAnimalList();
+    });
   }
 
   ngOnInit() {
-    this.http.get<IAnimal[]>("http://localhost:3000/animals").subscribe(animals => {
-      this._animals = animals;
-    })
+    this.http.setOrUpdateAnimalList();
+    this._animals = DataService.getAnimalList();
   }
 
-  setDB(value: Animal[]) {
-    this._animals = value;
-  }
+  updateAnimalList(value?: Animal[]) {
+    this.http.setOrUpdateAnimalList();
+    this._animals = DataService.getAnimalList();
+}
 
   setHideItem(value: boolean) {
     this._hideItem = value;
@@ -58,6 +62,7 @@ export class MainComponent implements OnInit {
   }
 
   returnAnimals(): Animal[] {
+    this._animals = DataService.getAnimalList();
     this._hideCats(this._hideItem);
     this.filterArray(this._searchText);
     return this._animals;

@@ -1,10 +1,11 @@
 <app-search (hideCats)="setHideItem($event)" (searchText)="setSearchText($event)"></app-search>
 <button mat-raised-button (click)="openDialog()">Launch dialog</button>
+<button mat-raised-button routerLink="pet/100" >Error handle</button>
 <div class="animals__list">
   <div class="animals__list__animal" *ngFor="let animal of returnAnimals();"
        (click)="this.animal.isVisible = !this.animal.isVisible">
 
-    <app-card (animals)="setDB($event)" [pet]="animal"></app-card>
+    <app-card (petsEmitter)="updateAnimalList($event)" [pet]="animal" [pets]="this._animals"></app-card>
     <hr>
     <div *ngIf="this.animal.isVisible">
       <app-info [type]="animal.type" [gender]="animal.gender" [age]="animal.age" [weight]="animal.weight"></app-info>
