@@ -1,0 +1,38 @@
+<form #animalForm="ngForm">
+
+  <div>
+    <div>Имя питомца:</div>
+    <input class="text form-control" placeholder="Enter name" type="text" name="name1" [(ngModel)]=animal.name required minlength="2">
+
+  </div>
+  <div>
+    <div><strong>Тип питомца:</strong></div>
+    <div class="form-group">
+      <mat-label>Котик</mat-label>
+      <input type="radio" required name="breed" id="1" value="Котик" placeholder="Котик" [(ngModel)]=animal.breed>
+      <mat-label>Собачка</mat-label>
+      <input type="radio" required name="breed" id="2" value="Собачка" placeholder="Песик" [(ngModel)]=animal.breed>
+      <mat-label>Попугай</mat-label>
+      <input type="radio" required name="breed" id="3" value="Попугай" placeholder="Попугай" [(ngModel)]=animal.breed>
+    </div>
+  </div>
+  <div>
+    <input class="text" placeholder="Enter type" type="text" name="type" [(ngModel)]=animal.type required minlength="2">
+  </div>
+  <div>
+    <div><strong>Пол питомца:</strong></div>
+    <mat-label>Мужской</mat-label>
+    <input type="radio" required name="gender" [(ngModel)]=animal.gender value="Мужской">
+    <mat-label>Женский</mat-label>
+    <input type="radio" required name="gender" [(ngModel)]=animal.gender value="Женский">
+  </div>
+  <div>
+    <div>Age:</div>
+    <input class="text" placeholder="Enter age" type="text" name="age" [(ngModel)]=animal.age required pattern="^[1-9]\d*$" >
+  </div>
+  <div>
+    <div>Weight:</div>
+    <input class="text" placeholder="Enter weight" type="text" name="weight" [(ngModel)]=animal.weight required pattern="^[1-9]\d*$">
+  </div>
+  <button mat-button type="submit" [disabled]="!animalForm.valid" (click)="Submit()">Добавить питомца</button>
+</form>

@@ -25,7 +25,6 @@ export class AppComponent implements OnInit{
     this._searchText = value;
   }
   filterArray(value:string) : void{
-    this._animals = DataService.getAnimals();
     this._animals = this._animals.filter(e => e.name.includes(value));
   }
   _hideCats(isHidden: boolean) {

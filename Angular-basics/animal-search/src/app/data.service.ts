@@ -16,7 +16,7 @@ export class DataService {
       gender: 'Мужской',
       age: 3,
       weight: 3,
-      img: 'assets/images/cat.png'
+      img: 'assets/images/Котик.png'
     },
     {
       isVisible: false,
@@ -26,7 +26,7 @@ export class DataService {
       gender: 'Мужской',
       age: 4,
       weight: 4,
-      img: 'assets/images/cat.png'
+      img: 'assets/images/Котик.png'
     },
     {
       isVisible: false,
@@ -36,7 +36,7 @@ export class DataService {
       gender: 'Женский',
       age: 5,
       weight: 5,
-      img: 'assets/images/cat.png'
+      img: 'assets/images/Котик.png'
     },
     {
       isVisible: false,
@@ -46,7 +46,7 @@ export class DataService {
       gender: 'Мужской',
       age: 2,
       weight: 3,
-      img: 'assets/images/cat.png'
+      img: 'assets/images/Котик.png'
     },
     {
       isVisible: false,
@@ -56,7 +56,7 @@ export class DataService {
       gender: 'Мужской',
       age: 1,
       weight: 9,
-      img: 'assets/images/dog.png'
+      img: 'assets/images/Собачка.png'
     },
     {
       isVisible: false,
@@ -66,7 +66,7 @@ export class DataService {
       gender: 'Мужской',
       age: 2,
       weight: 14,
-      img: 'assets/images/dog.png'
+      img: 'assets/images/Собачка.png'
     },
     {
       isVisible: false,
@@ -76,7 +76,7 @@ export class DataService {
       gender: 'Мужской',
       age: 2,
       weight: 23,
-      img: 'assets/images/dog.png'
+      img: 'assets/images/Собачка.png'
     },
     {
       isVisible: false,
@@ -86,7 +86,7 @@ export class DataService {
       gender: 'Мужской',
       age: 1,
       weight: 8,
-      img: 'assets/images/dog.png'
+      img: 'assets/images/Собачка.png'
     },
     {
       isVisible: false,
@@ -96,7 +96,7 @@ export class DataService {
       gender: 'Мужской',
       age: 3,
       weight: 0.13,
-      img: 'assets/images/parrot.png'
+      img: 'assets/images/Попугай.png'
     },
     {
       isVisible: false,
@@ -106,7 +106,7 @@ export class DataService {
       gender: 'Мужской',
       age: 4,
       weight: 0.2,
-      img: 'assets/images/parrot.png'
+      img: 'assets/images/Попугай.png'
     }
 
   ]

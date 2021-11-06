@@ -1,0 +1,158 @@
+{
+  "animals": [
+    {
+      "id": 1,
+      "isVisible": false,
+      "breed": "Котик",
+      "name": "Жамо",
+      "type": "Бенгальская кошка",
+      "gender": "Мужской",
+      "age": 4,
+      "weight": 4,
+      "img": "assets/images/Котик.png"
+    },
+    {
+      "id": 2,
+      "isVisible": false,
+      "breed": "Котик",
+      "name": "Урсик",
+      "type": "Абиссинская кошка",
+      "gender": "Женский",
+      "age": 5,
+      "weight": 5,
+      "img": "assets/images/Котик.png"
+    },
+    {
+      "id": 3,
+      "isVisible": false,
+      "breed": "Котик",
+      "name": "Церри",
+      "type": "Абиссинская кошка",
+      "gender": "Мужской",
+      "age": 2,
+      "weight": 3,
+      "img": "assets/images/Котик.png"
+    },
+    {
+      "id": 4,
+      "isVisible": false,
+      "breed": "Собачка",
+      "name": "Персик",
+      "type": "Австралийская овчарка",
+      "gender": "Мужской",
+      "age": 1,
+      "weight": 9,
+      "img": "assets/images/Собачка.png"
+    },
+    {
+      "id": 5,
+      "isVisible": false,
+      "breed": "Собачка",
+      "name": "Пуф",
+      "type": "Австралийский келпи",
+      "gender": "Мужской",
+      "age": 2,
+      "weight": 14,
+      "img": "assets/images/Собачка.png"
+    },
+    {
+      "id": 6,
+      "isVisible": false,
+      "breed": "Собачка",
+      "name": "Патрик",
+      "type": "Американская акита",
+      "gender": "Мужской",
+      "age": 2,
+      "weight": 23,
+      "img": "assets/images/Собачка.png"
+    },
+    {
+      "id": 7,
+      "isVisible": false,
+      "breed": "Собачка",
+      "name": "Патрик",
+      "type": "Английский бульдог",
+      "gender": "Мужской",
+      "age": 1,
+      "weight": 8,
+      "img": "assets/images/Собачка.png"
+    },
+    {
+      "id": 8,
+      "isVisible": false,
+      "breed": "Попугай",
+      "name": "Покер",
+      "type": "Волнистый попугай",
+      "gender": "Мужской",
+      "age": 3,
+      "weight": 0.13,
+      "img": "assets/images/Попугай.png"
+    },
+    {
+      "id": 9,
+      "isVisible": false,
+      "breed": "Собачка",
+      "name": "dsf",
+      "type": "sdafg",
+      "gender": "Женский",
+      "age": "2",
+      "weight": "3",
+      "img": "assets/images/Собачка.png"
+    },
+    {
+      "id": 10,
+      "isVisible": false,
+      "breed": "Собачка",
+      "name": "dsf",
+      "type": "sdafg",
+      "gender": "Женский",
+      "age": "2",
+      "weight": "3",
+      "img": "assets/images/Собачка.png"
+    },
+    {
+      "id": 11,
+      "isVisible": false,
+      "breed": "Собачка",
+      "name": "dsf",
+      "type": "sdafg",
+      "gender": "Женский",
+      "age": "2",
+      "weight": "3",
+      "img": "assets/images/Собачка.png"
+    },
+    {
+      "id": 12,
+      "isVisible": false,
+      "breed": "Собачка",
+      "name": "dsf",
+      "type": "sdafg",
+      "gender": "Женский",
+      "age": "2",
+      "weight": "3",
+      "img": "assets/images/Собачка.png"
+    },
+    {
+      "id": 13,
+      "isVisible": false,
+      "breed": "Собачка",
+      "name": "dsf",
+      "type": "sdafg",
+      "gender": "Женский",
+      "age": "2",
+      "weight": "3",
+      "img": "assets/images/Собачка.png"
+    },
+    {
+      "id": 14,
+      "isVisible": false,
+      "breed": "Попугай",
+      "name": "dsf",
+      "type": "sdafg",
+      "gender": "Женский",
+      "age": "2",
+      "weight": "3",
+      "img": "assets/images/Попугай.png"
+    }
+  ]
+}
